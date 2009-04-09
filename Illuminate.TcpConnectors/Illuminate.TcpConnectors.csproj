@@ -1,0 +1,91 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E3CFEC0-FC72-42EA-8A8B-1077F5D119DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Illuminate.Queue</RootNamespace>
+    <AssemblyName>Illuminate.Queue</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\gazaro\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\gazaro\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clients\QueueClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\QueueProtocol.cs" />
+    <Compile Include="Providers\QueueProviderClient.cs" />
+    <Compile Include="Providers\QueueProviderServer.cs" />
+    <Compile Include="QueueData\Data.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\3.3 Client-Server\Gazaro.BL\Gazaro.DataService.csproj">
+      <Project>{9C61E0E3-EFFC-43D9-B14C-7A2F75E3569A}</Project>
+      <Name>Gazaro.DataService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\3.3 Client-Server\Gazaro.DataInterfaces\Gazaro.DataInterfaces.csproj">
+      <Project>{2BE23FF5-32A4-4413-8E79-72399E58EFE2}</Project>
+      <Name>Gazaro.DataInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\3.3 Client-Server\Gazaro.Tools\Gazaro.Tools.csproj">
+      <Project>{3C8E3AFA-4DFE-42AF-98F7-13E13E71FE18}</Project>
+      <Name>Gazaro.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Illuminate.Node\Illuminate.Core\Illuminate.Core.csproj">
+      <Project>{27D5D6CB-CC4A-4297-BCDC-3C5F10B074C0}</Project>
+      <Name>Illuminate.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Illuminate.Node\Illuminate.Tools\Illuminate.Tools.csproj">
+      <Project>{1DC4BA1A-44C9-4F4D-9BF5-DB69C0B7196D}</Project>
+      <Name>Illuminate.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Illuminate.PriorityQueue\Illuminate.PriorityQueue.csproj">
+      <Project>{DD6AFE20-D2EF-4C25-A450-14D227A98487}</Project>
+      <Name>Illuminate.PriorityQueue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Illuminate.QueueServer\Illuminate.UrlPriorityQueu\Illuminate.UrlPriorityQueue.csproj">
+      <Project>{E80B0475-D5DB-4558-8C56-37F5A8F425F1}</Project>
+      <Name>Illuminate.UrlPriorityQueue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Illuminate.Tcp\Illuminate.Tcp.csproj">
+      <Project>{4AEF03D7-84CF-4045-B259-DEBD11140386}</Project>
+      <Name>Illuminate.Tcp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

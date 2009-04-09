@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Illuminate.Tools.DatabaseLogTarget", "Illuminate.Tools.DatabaseLogTarget.csproj", "{4D284D0E-3A8D-478E-8F08-805DC9CBCFE4}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Illuminate.DataService", "..\..\Illuminate.DataService\Illuminate.DataService.csproj", "{E55C0FD9-C0D3-467E-9B7D-CF00C4F2852F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D284D0E-3A8D-478E-8F08-805DC9CBCFE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D284D0E-3A8D-478E-8F08-805DC9CBCFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D284D0E-3A8D-478E-8F08-805DC9CBCFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D284D0E-3A8D-478E-8F08-805DC9CBCFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55C0FD9-C0D3-467E-9B7D-CF00C4F2852F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55C0FD9-C0D3-467E-9B7D-CF00C4F2852F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55C0FD9-C0D3-467E-9B7D-CF00C4F2852F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55C0FD9-C0D3-467E-9B7D-CF00C4F2852F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

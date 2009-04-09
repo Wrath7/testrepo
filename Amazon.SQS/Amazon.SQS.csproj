@@ -1,0 +1,82 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amazon.SQS</RootNamespace>
+    <AssemblyName>Amazon.SQS</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{CCC83DB4-F65F-4030-BE8F-0AC8AA65F5C0}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Illuminate\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Amazon.SQS\*.cs" />
+    <Compile Include="Amazon.SQS\Model\*.cs" />
+    <Compile Include="Amazon.SQS\Mock\*.cs" />
+    <Compile Include="Amazon.SQS\Util\*.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amazon.SQS\Mock\CreateQueueResponse.xml">
+      <LogicalName>CreateQueueResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\ListQueuesResponse.xml">
+      <LogicalName>ListQueuesResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\DeleteMessageResponse.xml">
+      <LogicalName>DeleteMessageResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\DeleteQueueResponse.xml">
+      <LogicalName>DeleteQueueResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\GetQueueAttributesResponse.xml">
+      <LogicalName>GetQueueAttributesResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\ReceiveMessageResponse.xml">
+      <LogicalName>ReceiveMessageResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\SendMessageResponse.xml">
+      <LogicalName>SendMessageResponse.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.SQS\Mock\SetQueueAttributesResponse.xml">
+      <LogicalName>SetQueueAttributesResponse.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
