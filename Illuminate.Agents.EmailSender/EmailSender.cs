@@ -21,6 +21,7 @@ namespace Illuminate.Agents.EmailSender
 		public new void Run()
 		{
 			int a = 0;
+			int b = 0;
 
 			base.Run();
 
