@@ -20,6 +20,8 @@ namespace Illuminate.Agents.EmailSender
 
 		public new void Run()
 		{
+			int a = 0;
+
 			base.Run();
 
 			//check for any instant push emails
